@@ -1,0 +1,13 @@
+<h2 class="ui center aligned large header">Welcome to Sugar Messages</h2>
+
+<%= form_for(:user, html: {class: "ui form", role: "form"}, url: users_path) do |f|%>
+  <div class="field">
+    <label>Username</label>
+     <%= f.text_field :username, placeholder: "Username" %>
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <%= f.submit"Login", class: "ui orange submit button" %>
+  <%end%>
